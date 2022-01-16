@@ -109,7 +109,7 @@ server <- function(input, output, session) {
   output$downloadData <- downloadHandler(
     filename = "trajectory_output.csv",
     content = function(file) {
-      out <- compare_plot2(input$midyear, minInnings,
+      out <- compare_plot2(input$midyear, input$minInnings,
                           input$measure, input$xvar,
                           input$hof)
       out$S$MidYearLo <- input$midyear[1]
