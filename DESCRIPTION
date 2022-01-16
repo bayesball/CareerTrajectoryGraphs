@@ -1,0 +1,14 @@
+Package: CareerTrajectoryGraphs
+Type: Package
+Title: Shiny Career Trajectory Applications
+Version: 0.2.7
+Author: Jim Albert
+VignetteBuilder: knitr
+Suggests: knitr, rmarkdown
+Imports:  ggplot2, shiny, dplyr
+Maintainer: Jim Albert <albert@bgsu.edu>
+URL: https://github.com/bayesball/CareerTrajectoryGraphs
+Description: A collection of Shiny functions useful for exploring baseball player trajectories.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
