@@ -1,4 +1,4 @@
-# CareerTrajectory
+# CareerTrajectoryGraphs
 
 A collection of Shiny functions to illustrate career trajectories in baseball.
 
@@ -8,12 +8,12 @@ This package depends on the following packages that should be installed first.
 
 shiny, ggplot2, dplyr, readr, Lahman, geomtextpath, shinythemes
 
-To install the CareerTrajectorypackage, use the install_github() function from the remotes package:
+To install the CareerTrajectoryGraphs package, use the install_github() function from the remotes package:
 
 ```
 library(remotes)
 
-install_github("bayesball/CareerTrajectory")
+install_github("bayesball/CareerTrajectoryGraphs")
 ```
 
 
