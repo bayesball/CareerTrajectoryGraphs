@@ -2,7 +2,7 @@
 
 A collection of Shiny functions to illustrate career trajectories in baseball.
 
-![GitHub Logo](/images/pitching2.png)
+![GitHub Logo](/images/fg_batting.png)
 
 This package depends on the following packages that should be installed first.
 
