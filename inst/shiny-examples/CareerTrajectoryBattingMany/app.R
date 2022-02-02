@@ -5,6 +5,8 @@ library(Lahman)
 library(geomtextpath)
 library(purrr)
 
+# data is read from a Github repository
+
 fg <- read_csv("https://raw.githubusercontent.com/bayesball/HomeRuns2021/main/woba_wts.csv")
 
 compare_plot2 <- function(midYearRange, minPA,

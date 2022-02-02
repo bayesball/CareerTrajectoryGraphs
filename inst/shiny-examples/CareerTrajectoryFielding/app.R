@@ -3,6 +3,8 @@ library(ggplot2)
 library(Lahman)
 library(geomtextpath)
 
+# data is read from the Lahman package
+
 selectPlayers <- function(midYearRange, minGames,
                           position){
   require(Lahman)

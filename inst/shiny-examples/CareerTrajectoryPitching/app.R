@@ -4,6 +4,8 @@ library(ggplot2)
 library(Lahman)
 library(geomtextpath)
 
+# data is read from a Github repository
+
 fg <- read_csv("https://raw.githubusercontent.com/bayesball/HomeRuns2021/main/woba_wts.csv")
 
 selectPlayers2 <- function(midYearRange, minIP){

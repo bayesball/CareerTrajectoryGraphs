@@ -3,6 +3,8 @@ library(ggplot2)
 library(geomtextpath)
 library(readr)
 
+# data is read from a Github respository
+
 fg_batting <- read_csv("https://raw.githubusercontent.com/bayesball/HomeRuns2021/main/fgbatting_complete.csv")
 
 compare_plot <- function(midYearRange, minPA,

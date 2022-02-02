@@ -3,6 +3,8 @@ library(dplyr)
 library(ggplot2)
 library(geomtextpath)
 
+# data is read from a Github respository
+
 fg_pitching <- read_csv("https://raw.githubusercontent.com/bayesball/HomeRuns2021/main/fgpitching_complete.csv")
 
 compare_plot2 <- function(midYearRange, minIP,

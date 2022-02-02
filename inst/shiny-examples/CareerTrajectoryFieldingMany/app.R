@@ -4,6 +4,8 @@ library(Lahman)
 library(geomtextpath)
 library(purrr)
 
+# data is fead from the Lahman package
+
 compare_plot <- function(midYearRange, minGames,
                          position, measure, xvar,
                          hof){
