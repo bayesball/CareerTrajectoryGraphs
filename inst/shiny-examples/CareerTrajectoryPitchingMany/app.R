@@ -36,7 +36,7 @@ compare_plot <- function(midYearRange, minIP,
 
   Pitching %>%
     filter(playerID %in% C_info$playerID) %>%
-    inner_join(select(Master, playerID,
+    inner_join(select(People, playerID,
                       nameFirst, nameLast),
                by = "playerID") %>%
     mutate(Name = paste(nameFirst, nameLast)) %>%
@@ -62,7 +62,7 @@ compare_plot <- function(midYearRange, minIP,
     mutate(FIP = FIP + cFIP) -> S
   # function to obtain birthyear for player
   get_birthyear <- function(playerid) {
-    Master %>%
+    People %>%
       filter(playerID == playerid)  %>%
       mutate(Name = paste(nameFirst, nameLast),
              birthyear = ifelse(birthMonth >= 7,

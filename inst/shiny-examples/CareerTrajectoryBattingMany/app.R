@@ -38,7 +38,7 @@ compare_plot2 <- function(midYearRange, minPA,
   # compute stats for each player in list
   Batting %>%
     filter(playerID %in% C_info$playerID) %>%
-    inner_join(select(Master, playerID,
+    inner_join(select(People, playerID,
                       nameFirst, nameLast),
                by = "playerID") %>%
     mutate(Name = paste(nameFirst, nameLast)) %>%
@@ -74,7 +74,7 @@ compare_plot2 <- function(midYearRange, minPA,
            HR_Rate = 100 * HR / wOBA_den) -> S
   # function to obtain birthyear for player
   get_birthyear <- function(playerid) {
-    Master %>%
+    People %>%
       filter(playerID == playerid)  %>%
       mutate(Name = paste(nameFirst, nameLast),
              birthyear = ifelse(birthMonth >= 7,

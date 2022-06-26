@@ -24,7 +24,7 @@ selectPlayers <- function(midYearRange, minPA){
            midYear >= midYearRange[1],
            PA >= minPA) %>%
     select(playerID) %>%
-    inner_join(Master, by = "playerID") %>%
+    inner_join(People, by = "playerID") %>%
     mutate(Name = paste(nameFirst, nameLast)) %>%
     select(playerID, Name)
 }
@@ -34,16 +34,16 @@ compare_plot <- function(playerid_1, playerid_2,
   if((length(playerid_1) > 0) &
      (length(playerid_2) > 0)){
   # collect names of two players
-  Name1 <- filter(Master, playerID == playerid_1) %>%
+  Name1 <- filter(People, playerID == playerid_1) %>%
     mutate(Name = paste(nameFirst, nameLast)) %>%
     select(Name) %>% pull()
-  Name2 <- filter(Master, playerID == playerid_2) %>%
+  Name2 <- filter(People, playerID == playerid_2) %>%
     mutate(Name = paste(nameFirst, nameLast)) %>%
     select(Name) %>% pull()
   # collect hitting stats for two players for each season
   Batting %>%
     filter(playerID %in% c(playerid_1, playerid_2)) %>%
-    inner_join(select(Master, playerID,
+    inner_join(select(People, playerID,
                       nameFirst, nameLast),
                by = "playerID") %>%
     mutate(Name = paste(nameFirst, nameLast)) %>%
@@ -77,7 +77,7 @@ compare_plot <- function(playerid_1, playerid_2,
            HR_Rate = 100 * HR / wOBA_den) -> S
   # function to obtain birthyear for player
   get_birthyear <- function(playerid) {
-    Master %>%
+    People %>%
       filter(playerID == playerid)  %>%
       mutate(Name = paste(nameFirst, nameLast),
              birthyear = ifelse(birthMonth >= 7,
